@@ -3,14 +3,17 @@ import { Observable, of } from 'rxjs';
 import { HEROES } from './mock-heroes';
 import { Hero } from './hero';
 
-@Injectable({
-  providedIn: 'root'
-})
-export abstract class AbstractHeroService {
+export interface AbstractHeroService {
 
-  constructor() { }
+  getHeroes(): Observable<Hero[]>;
 
-  abstract getHeroes(): Observable<Hero[]>;
+  getHero(id: number): Observable<Hero>;
 
-  abstract getHero(id: number): Observable<Hero>;
+  updateHero(hero: Hero): Observable<any>;
+
+  addHero(hero: Hero): Observable<Hero>;
+
+  deleteHero(hero: Hero | number): Observable<Hero>;
+
+  searchHeroes(term: string): Observable<Hero[]>;
 }

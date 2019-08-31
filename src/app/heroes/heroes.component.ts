@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { AbstractHeroService } from '../abstract-hero.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
 
-  constructor(private heroService: HeroService) { }
+  constructor(@Inject('MyHeroService') private heroService: AbstractHeroService) { }
 
   ngOnInit() {
     this.getHeroes();

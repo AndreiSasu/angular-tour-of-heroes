@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
 import { AbstractHeroService } from '../abstract-hero.service';
 
 

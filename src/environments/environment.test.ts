@@ -6,6 +6,7 @@ import { MockHeroService } from 'src/app/mock-hero.service';
 
 export const environment = {
   production: false,
+  name: 'Test',
   heroServiceType: MockHeroService
 };
 

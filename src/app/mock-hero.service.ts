@@ -10,7 +10,7 @@ import { AbstractHeroService } from './abstract-hero.service';
 
 
 @Injectable({ providedIn: 'root' })
-export class HeroService implements AbstractHeroService {
+export class MockHeroService implements AbstractHeroService {
 
   private heroesUrl = 'api/heroes';  // URL to web api
 
@@ -117,6 +117,6 @@ export class HeroService implements AbstractHeroService {
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`HeroService: ${message}`);
+    this.messageService.add(`MOCK HeroService: ${message}`);
   }
 }

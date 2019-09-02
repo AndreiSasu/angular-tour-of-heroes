@@ -3,7 +3,7 @@ import { Hero } from '../hero';
 
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { AbstractHeroService } from '../abstract-hero.service';
+import { HeroService } from '../hero-service';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class HeroDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    @Inject('MyHeroService') private heroService: AbstractHeroService,
+    @Inject('MyHeroService') private heroService: HeroService,
     private location: Location
   ) { }
 

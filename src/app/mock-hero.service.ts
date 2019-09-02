@@ -6,11 +6,11 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero';
 import { MessageService } from './message.service';
-import { AbstractHeroService } from './abstract-hero.service';
+import { HeroService } from './hero-service';
 
 
 @Injectable({ providedIn: 'root' })
-export class MockHeroService implements AbstractHeroService {
+export class MockHeroService implements HeroService {
 
   private heroesUrl = 'api/heroes';  // URL to web api
 
